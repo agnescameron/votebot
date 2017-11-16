@@ -1,0 +1,30 @@
+{
+  "name": "Votebot",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "register to vote!",
+  "homepage_url": "http://turbovote.org",
+  "background": {
+    "scripts": [
+      "background.js", "jquery.min.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_title": "Inject!"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs",
+    "webNavigation"
+  ],
+
+    "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["content-script.js", "jquery.min.js"],
+      "css":["bot.css"]
+    }
+  ]
+}
