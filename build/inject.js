@@ -1,24 +1,23 @@
 
 
+	var submitted = false;
+	var loaded = false;
+
 var script = document.createElement('script');
 script.src = "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js";
 script.type = 'text/javascript';
 document.getElementsByTagName('head')[0].appendChild(script);
-
-
 
 function main() {
 
 	var host = window.location.hostname;
 	console.log(host, " in main ");
 
-	var submitted = false;
-
-	inject(host);
-	popup(host);
+	inject(host, loaded);
+	popup(host, submitted);
 }
 
-function inject(host){
+function inject(host, loaded){
 
 	if(host == "www.usa.gov" || host == "turbovote.org" || host == "turbovote.org"){
 				console.log("host is turbo, usa, etc", host);
@@ -67,20 +66,34 @@ function inject(host){
 		console.log("host is not turbo, usa, etc")
 	}
 
+console.log("before loaded, loaded is", loaded);
+if(!loaded){
+		 window.open('https://turbovote.org','popupad','width=400,height=450');
+		loaded = true;
+	}
+console.log("loaded is", loaded);
+
+return loaded;
+
 };
 
 function popup(host, submitted){
 if (!submitted){
 	if(host == "facebook.com" || host == "twitter.com" || host == "www.youtube.com"){
+		 window.open('https://agnescameron.info/popup.html','popupad','width=1000,height=1000');
 		 window.open('https://turbovote.org','popupad','width=400,height=450');
 		 console.log(host, "in popup");
 		 window.prompt("why are you procrastinating, you're not registered to vote?","");
-		}
-		 return submitted;		
-	
+		 submitted = true;
+		}	
+	else{
+		submitted = false;
+	}
+
 	console.log("submitted is ", submitted);
 	}
-	return false;
+
+			 return submitted;	
 };
 
 window.onload = main();
