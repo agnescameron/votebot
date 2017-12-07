@@ -2,7 +2,7 @@ body {
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   color: #000000;
-  cursor: url("http://www.gifbin.com/bin/082014/1407342569_triangle_to_square_to_hexagon_to_triangle.gif");
+  cursor: url('assets/img/votebot-install.png') center no-repeat;
 }
 
 h1{
@@ -33,11 +33,12 @@ h2{
 }
 
 #title {
-  font: bold 50px/40px "Helvetica", "Arial", sans-serif;
+  font: bold 70px/40px "Helvetica", "Arial", sans-serif;
   background: blue;
   letter-spacing: -2px;
   margin: 0 0 10px 0;
   padding: 6px 6px 8px;
+/*  //line-height: 1.2;*/
 }
 
 #title a {
@@ -46,7 +47,7 @@ h2{
 }
 
 #inPage{
-  font: bold 40px/30px "Helvetica", "Arial", sans-serif;
+  font: bold 50px/40px "Helvetica", "Arial", sans-serif;
   margin: 0 0 10px 0;
   padding: 6px 6px 8px; 
   text-decoration: none;

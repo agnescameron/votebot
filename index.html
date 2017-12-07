@@ -15,6 +15,13 @@
   #draggable4 {}
   #draggable5 {}
   #draggable6 {}
+  #draggable7 {}
+  #draggable8 {}
+  #draggable9 {}
+  #draggable10 {}
+  #draggable11 {}
+  #draggable12 {}
+  #draggable13 {}  
 
   body{
     cursor: url("files/cursor.png") !important;
@@ -32,7 +39,14 @@
     $( "#draggable3").draggable();
     $( "#draggable4").draggable();
     $( "#draggable5").draggable();
-    $( "#draggable6").draggable();    
+    $( "#draggable6").draggable();  
+    $( "#draggable7").draggable();
+    $( "#draggable8").draggable();
+    $( "#draggable9").draggable(); 
+    $( "#draggable10").draggable();  
+    $( "#draggable11").draggable();
+    $( "#draggable12").draggable();
+    $( "#draggable13").draggable();            
   } );
 
 </script>
@@ -80,6 +94,50 @@
 </div>
 
 
+<div id="draggable7" class="ui-widget-content" style="position:absolute; left: 582px; top:223px;">
+	<div class="ovcont">
+	<img src= 'assets/img/manyscreens.png' class="image" style="height:100%, width:100%, position:absolute;" />
+	</div>
+</div>
+
+<div id="draggable8" class="ui-widget-content" style="position:absolute; left: 672px; top:1003px;">
+	<div class="ovcont">
+	<img src= 'assets/img/manyscreens.png' class="image" style="height:100%, width:100%, position:absolute;" />
+	</div>
+</div>
+
+<div id="draggable9" class="ui-widget-content" style="position:absolute;left: 152px; top:1193px;">
+	<div class="ovcont">
+	<img src= 'assets/img/manyscreens.png' class="image" style="height:100%, width:100%, position:absolute;" />
+	</div>
+</div>
+
+
+<div id="draggable10" class="ui-widget-content" style="position:absolute; left: 322px; top:2083px;">
+	<div class="ovcont">
+	<img src= 'assets/img/votebot-2.png' class="image" style="height:100%, width:100%, position:absolute;" />
+	</div>
+</div>
+
+<div id="draggable11" class="ui-widget-content" style="position:absolute; left: 102px; top:1583px;">
+	<div class="ovcont">
+	<img src= 'assets/img/votebot-1.png' class="image" style="height:100%, width:100%, position:absolute;" />
+	</div>
+</div>
+
+<div id="draggable12" class="ui-widget-content" style="position:absolute;left: 52px; top:483px;">
+	<div class="ovcont">
+	<img src= 'assets/img/votebot-install.png' class="image" style="height:100%, width:100%, position:absolute;" />
+	</div>
+</div>
+
+
+<div id="draggable13" class="ui-widget-content" style="position:absolute; left: 600px; top:100px;">
+	<div class="ovcont">
+	<img src= 'assets/img/manyscreens.png' class="image" style="height:100%, width:100%, position:absolute;" />
+	</div>
+</div>
+
 
       <div id="title">
         <a>votebot: motivational malware</a>
@@ -91,7 +149,7 @@
 <a id="inPage" href="#overview">overview</a> <br/>
 <a id="inPage" href="#process">process flow</a> <br/>
 <a id="inPage" href="#virality">virality</a> <br/>
-<a id="inPage" href="#status">status + milestones</a> <br/>
+<a id="inPage" href="#status">project status</a> <br/>
 <a id="inPage" href="#virality">virality</a> <br/>
 
 
@@ -115,7 +173,7 @@ Votebot is hosted by a webpage that supports inline installation of Chrome exten
 
 <br><br>
 
-The proposal defines clearly how Votebot works so the user fully understands what they are getting by downloading (though one might argue a more 'viral' implementation could mask this functionality). It will also clearly lay out how the user can opt out of the contract, (uninstall Votebot) and it will define how the user can fulfill the contract. And lastly, as part of the contract fulfillment, the proposal will explain how the user can pass along Votebot to his/her friends so that they may register as well.
+The proposal defines clearly how Votebot works so the user fully understands what they are getting (though one might argue a more 'viral' implementation could mask this functionality). It will also clearly lay out how the user can opt out of the contract, (uninstall Votebot) and it will define how the user can fulfill the contract. And lastly, as part of the contract fulfillment, the proposal will explain how the user can pass along Votebot to his/her friends so that they may register as well.
 
 <br><br>
 The extension uses a Javascript injection to repeatedly and without prompt present the user with popup windows whenever they use chrome. Those popup windows will be the landing page of that user's local voter registration website. The user will then have a choice of closing out the popup window, in which case another one will simply pop up moments later, or the user can click on the window and start the registration process. The aggressiveness of the bot's injection increases on sites typically associated with procrastination (Facebook, Twitter, YouTube).
