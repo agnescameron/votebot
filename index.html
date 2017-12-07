@@ -3,10 +3,60 @@
 
 <head>
  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />	
+ <link rel="stylesheet"  href="http://zhexi.info/chinternet/jquery-ui.css">
      <title>votebot.exe</title>
+
+
+
+  <style>
+  #draggable {}
+  #draggable2 {}
+  #draggable3 {}
+  #draggable4 {}
+
+  body{
+    cursor: url("files/cursor.png") !important;
+}
+  </style>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+  <script>
+  $( function() {
+    $( "#draggable").draggable();
+    $( "#draggable2").draggable();
+    $( "#draggable3").draggable();
+    $( "#draggable4").draggable();
+  } );
+
+</script>
+
+
+
 </head>
 
 <body>
+
+<div id="draggable" class="ui-widget-content" style="position:absolute; left: 432px; top:183px;">
+	<div class="ovcont">
+	<img src= 'assets/img/votebot-2.png' class="image" style="height:100%, width:100%, position:absolute;" />
+	</div>
+</div>
+
+<div id="draggable2" class="ui-widget-content" style="position:absolute; left: 762px; top:683px;">
+	<div class="ovcont">
+	<img src= 'assets/img/votebot-1.png' class="image" style="height:100%, width:100%, position:absolute;" />
+	</div>
+</div>
+
+<div id="draggable3" class="ui-widget-content" style="position:absolute;">
+	<div class="ovcont">
+	<img src= 'assets/img/votebot-install.png' class="image" style="height:100%, width:100%, position:absolute;" />
+	</div>
+</div>
+
 
       <div id="title">
         <a>votebot: motivational malware</a>
@@ -15,6 +65,7 @@
 <br><br>
 
 <a id="inPage" href="#abstract">abstract</a> <br/>
+<a id="inPage" href="#overview">overview</a> <br/>
 <a id="inPage" href="#process">process flow</a> <br/>
 <a id="inPage" href="#virality">virality</a> <br/>
 <a id="inPage" href="#status">status + milestones</a> <br/>
@@ -27,32 +78,48 @@
 
 
 <a name="abstract"><h1>abstract</h1></a>
-	<b>Votebot is a speculative project that appropriates traditionally malicious software to aid the user in registering to vote. As a project, it explores the potential of leveraging adversarial techniques to play an enforcement role in realising people's behavioral ambitions.  Furthermore, it takes a viral approach to success in execution and transmission by leveraging social pressures and shared experiences. </b>
+	<b>Votebot is a speculative project that appropriates traditionally malicious software to aid the user in registering to vote. With Votebot, we use adversarial techniques to force people to realise their ambitions. We take a viral approach propagation and success, leveraging social pressures and shared experiences. </b>
 <br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br>
+
+<a name="overview"><h1>overview</h1></a>
+<b>Votebot is at once an 'unhelpful helper software', and a 'benign malware'. An adversary that the user pits themselves against, but also shares a goal with.</b> It takes the form of a Chrome extension, appending itself to the users' browser and following them around the net, interrogating them as to why they are yet to register. 
+
+<br><br><br><br>
 
 <a name="process"><h1>process flow</h1></a>
-Votebot takes the form of a Chrome extension, hosted by a webpage that supports inline installation. The page is propagated via an email form which asks the user: "do you want help registering to vote?" If the user clicks yes, they are directed to this webpage, which explains the "rules of the game', and invites the user to install Votebot as a Chrome extension, which will assists the user in their efforts to register to vote. 
+Votebot is hosted by a webpage that supports inline installation of Chrome extensions. The page is propagated via an email form which asks the user: "do you want help registering to vote?" If the user clicks yes, they are directed to this webpage, which explains the "rules of the game', and invites the user to install Votebot as a Chrome extension, which will assists the user in their efforts to register to vote. 
+
+<br><br>
 
 The proposal defines clearly how Votebot works so the user fully understands what they are getting by downloading (though one might argue a more 'viral' implementation could mask this functionality). It will also clearly lay out how the user can opt out of the contract, (uninstall Votebot) and it will define how the user can fulfill the contract. And lastly, as part of the contract fulfillment, the proposal will explain how the user can pass along Votebot to his/her friends so that they may register as well.
+
+<br><br>
 The extension uses a Javascript injection to repeatedly and without prompt present the user with popup windows whenever they use chrome. Those popup windows will be the landing page of that user's local voter registration website. The user will then have a choice of closing out the popup window, in which case another one will simply pop up moments later, or the user can click on the window and start the registration process. The aggressiveness of the bot's injection increases on sites typically associated with procrastination (Facebook, Twitter, YouTube).
 
-
+<br><br>
 
 No additional popups will interrupt the user while they execute the registration process. The user is both pestered and assisted in doing something they want to do on some level but resist due to procrastination or forgetfulness. Once the user has successfully registered to vote, they must send proof of that registration to the friend who sent them the initial email with the proposal link. That friend can then let Votebot know the user has fulfilled half of their voter registration contract. Votebot will then send the user a new proposal link that they must forward on to three friends. After that link has been sent to three friends Votebot will automatically deactivate and the user has successfully fulfilled their contract.
+
+<br><br><br><br>
 
 <a name="virality"><h1>virality</h1></a>
 Users send Votebot to friends they think will be susceptible to its value proposition. These would be friends who have good civic intentions but tend to be busy or just simply procrastinate. The promised value of enforcing and facilitating coupled with a trusted source seek to amplify Votebot's successful contagion. I will click the link from you my friend because I trust you. After reading the proposal I download the bot not just because of the inherent value proposition but also because of an element of social pressure and trust stemming from the source. Upon successfully fulfilling the Votebot contract, I forward the new proposal link to three friends because I enjoyed the experience and feel good about my accomplishment. That positive user experience is communicated implicitly through the link and my friends click the link and download the bot as well. Thus a positive feedback of accomplishment and shared experience is virally communicated through a social network.
 
-
-VoteBot in the wild
-
+<br><br><br><br>
 <a name="status"><h1>project status</h1></a>
 A version 1.0 of Votebot has been completed and the code posted to Github (see link here). The functionality of that version largely track to the user experience outlined above in the Process Flow section.
 While we have seen significant interest in Votebot we have not been able to successfully beta test it yet. There has been significantly more resistance to downloading Votebot than we anticipated. We suspect part of this is due to our initial branding efforts. Early discussions when soliciting users to test the Chrome extension went well. However, any mention of the term "malware" immediately engendered hesitation which ultimately became reluctance to volunteer.
-
+<br><br><br><br>
 <a name="future"><h1>future enhancements</h1></a>
-Currently Votebot only assists the user in their efforts to register by navigating them to their local voter registration page through a popup window. Future versions of Votebot might go a step forward by making popup windows form fields that the user can fill out. These form fields would be the user's voter information (e.g. name, birthday, address, etc). Those pieces of information would be tracked by Votebot as a "percentage of registration completed." The idea is that by disintegrating the registration process and letting the user literally do one field at a time (one now, another later tonight, another tomorrow, etc.) Votebot gets around users not wanting to engage what they see as a lengthy process. Filling out literally one field would take no more than 2 - 5 seconds. Successfully inputting fields could delay future popups longer than just closing them out (i.e. filling in the name field would delay the next field, birthday, from popping up for four hours, rather than 90 seconds). When the user has filled in all fields for their particular registration form, the next popup window might be a fully filled in voter registration page with a simple "Submit" button that would submit the registration to the user's respective supervisor of elections.
+Currently Votebot only assists the user in their efforts to register by navigating them to their local voter registration page through a popup window. Future versions of Votebot might go a step forward by making popup windows form fields that the user can fill out. These form fields would be the user's voter information (e.g. name, birthday, address, etc). Those pieces of information would be tracked by Votebot as a "percentage of registration completed." The idea is that by disintegrating the registration process and letting the user literally do one field at a time (one now, another later tonight, another tomorrow, etc.) 
+
+<br><br><br><br>
+
+Votebot gets around users not wanting to engage what they see as a lengthy process. Filling out literally one field would take no more than 2 - 5 seconds. Successfully inputting fields could delay future popups longer than just closing them out (i.e. filling in the name field would delay the next field, birthday, from popping up for four hours, rather than 90 seconds). When the user has filled in all fields for their particular registration form, the next popup window might be a fully filled in voter registration page with a simple "Submit" button that would submit the registration to the user's respective supervisor of elections.
+
+
+<br><br><br><br>
 	Another possible extension is studying the spread and propagation of the bot: dynamics could be measured using a cookie or similar. Our current model for propagation is to demand that the user send the bot to three friends before they are able to 'stop playing' (in addition to themselves registering, confirmed by the person who sent the bot to them). Whilst there are ways to 'cheat' the bot — asking your friend to say you registered when you haven't, just not using chrome — Votebot does not seek to plug those holes. After all, if you go out of your way to avoid registering to vote, it's a far more conscious decision than forgetting to register in the first place. 
 	A more powerful way to distribute Votebot would be to distribute it more aggressively, e.g using paid adverts that bundle the extension as 'clickbait'. Whilst it would be an interesting experiment, however, it crosses the border of legality somewhat.  
 
