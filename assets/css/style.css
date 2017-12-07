@@ -2,11 +2,18 @@ body {
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   color: #000000;
+  cursor: url("http://www.gifbin.com/bin/082014/1407342569_triangle_to_square_to_hexagon_to_triangle.gif");
 }
 
 h1{
   color:blue;
 }
+
+h2{
+  color:blue;
+}
+
+
 
 #wrapper {
   width: 902px;
